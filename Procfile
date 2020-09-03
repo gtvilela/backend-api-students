@@ -1,1 +1,1 @@
-web: node app.js
+web: -r node dotenv/config --experimental-modules app.js
