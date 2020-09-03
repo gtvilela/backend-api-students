@@ -1,11 +1,11 @@
 import mongoose from 'mongoose';
 import express from 'express';
 import { studentRouter } from './routes/studentRouter.js';
-require('dotenv').config();
+import dotenv from 'dotenv';
 
 //Conexão MongoDB
 conexaoMongo();
-const { USERDB, PWDDB, PORT } = process.env;
+const { USERDB, PWDDB, PORT } = dotenv.config();
 
 async function conexaoMongo() {
   try {
