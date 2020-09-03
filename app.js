@@ -3,9 +3,10 @@ import express from 'express';
 import { studentRouter } from './routes/studentRouter.js';
 import dotenv from 'dotenv';
 
+dotenv.config();
 //Conexão MongoDB
 conexaoMongo();
-const { USERDB, PWDDB, PORT } = dotenv.config();
+const { USERDB, PWDDB, PORT } = process.env;
 
 async function conexaoMongo() {
   try {
